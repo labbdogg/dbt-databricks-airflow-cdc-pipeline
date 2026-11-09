@@ -1,0 +1,17 @@
+sources:
+  - name: walmart_databricks
+    database: walmart_catalog      # Databricks catalog the raw tables land in
+    schema: bronze                 # schema the raw tables land in
+
+    tables:
+      - name: customers
+
+      - name: employees
+
+      - name: order_items
+
+      - name: orders
+
+      - name: products
+
+      - name: stores

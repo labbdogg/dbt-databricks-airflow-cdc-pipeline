@@ -1,0 +1,11 @@
+snapshots:
+  - name: dim_orders_snapshot
+    relation: ref('eph_orders')
+    config:
+      schema: gold
+      database: WALMART_CATALOG
+      unique_key: order_id
+      strategy: timestamp
+      updated_at: order_updated_timestamp
+      dbt_valid_to_current: "to_date('9999-12-31')"
+      hard_deletes: ignore

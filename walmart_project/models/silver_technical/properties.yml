@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: products_technical
+    
+    columns:
+
+      - name: product_id
+        data_tests: 
+          - unique
+          - not_null
+
+      - name: price
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: "> 0"
+
+
+  - name: orders_technical
+    
+    columns:
+
+      - name: order_id
+        data_tests: 
+          - unique
+          - not_null
